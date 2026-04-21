@@ -18,7 +18,6 @@ public class HealthComponent : MonoBehaviour
     {
         currentHealth = maxHealth;
         OnHealthInitialized?.Invoke(currentHealth);  
-
     }
     
     public void ReceiveDamage(float amount)
