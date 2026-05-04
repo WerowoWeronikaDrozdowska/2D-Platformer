@@ -6,7 +6,7 @@ public class PlayerHealth : MonoBehaviour
 {
 
     public float maxhealth = 100;
-    private float health;
+    public float health { get; private set; }
     private bool canReceiveDamage = true;
     public float invincibilitytimer = 1;
 
@@ -20,6 +20,7 @@ public class PlayerHealth : MonoBehaviour
     {
         health = maxhealth;
         OnHealthInitialised?.Invoke(health);
+        Debug.Log("Invoke");
     }
 
     public void ReceiveDamage(int amount, Vector3 origin)

@@ -14,7 +14,7 @@ public class UICoinDisplay : MonoBehaviour
     {
         //Zacząć nasłuchiwać player health event
         CoinComponent.OnCoinChanged += OnCoinChanged;
-        CoinComponent.OnCoinInit += OnCoinChanged;
+        CoinText.text=CoinComponent.points.ToString();
     }
 
    

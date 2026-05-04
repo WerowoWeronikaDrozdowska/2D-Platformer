@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CoinComponent : MonoBehaviour
 {
-    private int points;
+    public int points { get; private set;  }
 
     public delegate void OnCoinChangedHandler(int amount, int changedAmount);
     public event OnCoinChangedHandler OnCoinChanged;

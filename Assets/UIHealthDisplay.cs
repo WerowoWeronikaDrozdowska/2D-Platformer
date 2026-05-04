@@ -15,12 +15,14 @@ public class UIHealthDisplay : MonoBehaviour
     {
         //Zacz¹æ nas³uchiwaæ player health event
         playerHealth.OnHealthChanged += OnHealthChanged;
-        playerHealth.OnHealthInitialised += OnHealthInit;
+        healthText.text = playerHealth.health.ToString();
+        Debug.Log("Listening");
     }
 
     private void OnHealthInit(float newHealth)
     {
         healthText.text = newHealth.ToString();
+        Debug.Log("HpInnit");
     }
 
     public void OnHealthChanged(float newHealth, float amountChanged)
