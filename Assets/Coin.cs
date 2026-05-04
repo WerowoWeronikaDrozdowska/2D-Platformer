@@ -2,16 +2,16 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+  
+    public int point = 1;
 
-    // Update is called once per frame
-    void Update()
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        collision.GetComponent<CoinComponent>().AddPoints(point);
+        Destroy(gameObject);
     }
-   
 }
+
+
+

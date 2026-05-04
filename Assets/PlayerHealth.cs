@@ -8,7 +8,7 @@ public class PlayerHealth : MonoBehaviour
     public float maxhealth = 100;
     private float health;
     private bool canReceiveDamage = true;
-    public float invincibilitytimer = 2;
+    public float invincibilitytimer = 1;
 
     public delegate void HealthChangedHandler(float newHealth, float amountChanged);
     public event HealthChangedHandler OnHealthChanged;

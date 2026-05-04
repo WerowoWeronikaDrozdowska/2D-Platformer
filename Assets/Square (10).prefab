@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8551997362641620899}
   - component: {fileID: -5009641603181490334}
   - component: {fileID: -5211713491085979969}
+  - component: {fileID: -3987315712915946231}
   m_Layer: 0
   m_Name: Square (10)
   m_TagString: Untagged
@@ -206,3 +207,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c21829b7931b6f24f8dc2cea9e4d25a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxhealth: 100
+  invincibilitytimer: 2
+--- !u!114 &-3987315712915946231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7748705966348623376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a21295c32259f740be109ea32a3c00b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 10
+  stoppingForce: 5
+  speed: 10
+  jumpForce: 10
