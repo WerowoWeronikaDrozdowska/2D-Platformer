@@ -5,9 +5,30 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Start Screen.unity
+    guid: 2eb42d489ef1d5042a1d0833cf2580ce
+  - enabled: 1
+    path: Assets/Scenes/scena fajna 0.unity
+    guid: fdb0b8a5b0a99174699ea21c4c391899
+  - enabled: 1
+    path: Assets/Scenes/scena fajna 1.unity
+    guid: ad39a26aef2963a4ebdcf569c4b3003d
+  - enabled: 1
+    path: Assets/Scenes/scena fajna 2.unity
+    guid: 29beb84e50990f0439330e79319360b4
+  - enabled: 1
+    path: Assets/Scenes/scena fajna 3.unity
+    guid: 4cedb7c0f3f3f72468e575a662fbbb84
+  - enabled: 1
+    path: Assets/Scenes/scena fajna 4.unity
+    guid: 9da2a25bba17c3c458ceb2d63d4424c3
+  - enabled: 1
+    path: Assets/Scenes/game fail.unity
+    guid: 99696831d9fc5a141acfc58a79e4a2ce
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
