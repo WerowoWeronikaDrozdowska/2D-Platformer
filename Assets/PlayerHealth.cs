@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -42,6 +43,10 @@ public class PlayerHealth : MonoBehaviour
             StartCoroutine(InvincibilityTimer(invincibilitytimer, ResetInvincibility));
         }
         Debug.Log(health);
+        if (health <= 0)
+        {
+            powrot.deathscreen(SceneManager.GetActiveScene().name);
+        }
     }
 
     IEnumerator InvincibilityTimer(float time, Action callback)
