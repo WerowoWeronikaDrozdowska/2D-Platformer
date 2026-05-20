@@ -1,12 +1,14 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
-
+using System;
+using System.Collections;
 public class PlayerMotor : MonoBehaviour
 {
     Vector2 direction;
     private Rigidbody2D rigidbody2D;
-    private bool canJump = true;
+    private int canJump = 2;
+    private bool canDash = true;
     public float maxSpeed = 10;
     public float stoppingForce = 5;
     public float speed = 10;
@@ -43,19 +45,37 @@ public class PlayerMotor : MonoBehaviour
     {
         direction = value.Get<Vector2>();
     }
+    private void OnSprint()
+    {
+        if (direction.x != 0)
+        {
+            canDash = false;
+            rigidbody2D.AddForce(new Vector2(MathF.Sign(direction.x)*1000, 0));
+            StartCoroutine(InvincibilityTimer(1, Resetdash));
+        }
 
+    }
+    private void Resetdash()
+    {
+        canDash = true;
+    }
+    IEnumerator InvincibilityTimer(float time, Action callback)
+    {
+        yield return new WaitForSeconds(time);
+        callback.Invoke();
+    }
     private void OnJump()
     {
-        if (canJump)
+        if (canJump>0)
         {
             rigidbody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            canJump = false;
+            canJump -= 1;
         }
 
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        canJump = true;
+        canJump = 2;
     }
 }
