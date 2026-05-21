@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -5009641603181490334}
   - component: {fileID: -5211713491085979969}
   - component: {fileID: -3987315712915946231}
+  - component: {fileID: -2254769617061214024}
   m_Layer: 0
   m_Name: Square (10)
   m_TagString: Untagged
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 7748705966348623376}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 1, w: -0.0003822595}
-  m_LocalPosition: {x: 8.46, y: 3.6586, z: 0}
+  m_LocalPosition: {x: 8.3119, y: 6.19, z: 0}
   m_LocalScale: {x: 0.60550493, y: 0.5912701, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -225,3 +226,25 @@ MonoBehaviour:
   stoppingForce: 5
   speed: 10
   jumpForce: 10
+--- !u!95 &-2254769617061214024
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7748705966348623376}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

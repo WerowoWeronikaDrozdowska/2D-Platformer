@@ -13,6 +13,7 @@ public class PlayerMotor : MonoBehaviour
     public float stoppingForce = 5;
     public float speed = 10;
     public float jumpForce = 10;
+    public Animator animator;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
@@ -40,7 +41,18 @@ public class PlayerMotor : MonoBehaviour
 
 
     }
-
+    private void Update()
+    {
+        animator.SetFloat("Speed",MathF.Abs(rigidbody2D.linearVelocityX));
+        if (rigidbody2D.linearVelocityX > 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = false;
+        }
+        if (rigidbody2D.linearVelocityX < 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
+    }
     private void OnMove(InputValue value)
     {
         direction = value.Get<Vector2>();
