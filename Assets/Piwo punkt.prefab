@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -7924008915605955108}
   - component: {fileID: -291710785800784448}
   m_Layer: 0
-  m_Name: Circle (6)
+  m_Name: Piwo punkt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8293461521501190705, guid: 83601969aaff0bd4cbf1ca1a191f94d0, type: 3}
+  m_Sprite: {fileID: -8293461521501190705, guid: 3e23d7ad7e851dd4388a0f52435d7b7e, type: 3}
   m_Color: {r: 1, g: 0.9417314, b: 0.504717, a: 1}
   m_FlipX: 0
   m_FlipY: 0

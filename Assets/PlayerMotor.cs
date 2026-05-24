@@ -15,6 +15,7 @@ public class PlayerMotor : MonoBehaviour
     public float speed = 10;
     public float jumpForce = 10;
     public Animator animator;
+    public GameObject pierd;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
@@ -45,16 +46,24 @@ public class PlayerMotor : MonoBehaviour
     }
     private void Update()
     {
-        animator.SetBool("Isjumping", -rigidbody2D.linearVelocityY > MathF.Abs(rigidbody2D.linearVelocityX));
+        animator.SetBool("Isjumping", MathF.Abs(rigidbody2D.linearVelocityY) > MathF.Abs(rigidbody2D.linearVelocityX));
         animator.SetFloat("Speed",MathF.Abs(rigidbody2D.linearVelocityX));
         if (rigidbody2D.linearVelocityX > 0)
         {
             GetComponent<SpriteRenderer>().flipX = false;
+            Quaternion r = pierd.transform.rotation;
+            r.z = 0;
+            pierd.transform.rotation = r;
         }
         if (rigidbody2D.linearVelocityX < 0)
         {
             GetComponent<SpriteRenderer>().flipX = true;
+           
+            Quaternion r = pierd.transform.rotation;
+            r.z = -180;
+            pierd.transform.rotation = r;
         }
+
     }
     private void OnMove(InputValue value)
     {
@@ -67,6 +76,7 @@ public class PlayerMotor : MonoBehaviour
             canDash = false;
             rigidbody2D.AddForce(new Vector2(MathF.Sign(direction.x)*1000, 0));
             StartCoroutine(Timer(1, Resetdash));
+            pierd.GetComponent<ParticleSystem>().Emit(30);
         }
 
     }
@@ -82,7 +92,7 @@ public class PlayerMotor : MonoBehaviour
     private void Resetmove()
     {
         canmove = true;
-        animator.SetBool("Special", false);
+        animator.SetBool("IsSpecial", false);
     }
     
     private void OnJump()
@@ -103,10 +113,12 @@ public class PlayerMotor : MonoBehaviour
     }
     private void OnInteract()
     {
+        if (animator.GetBool("IsSpecial")) return;
         canmove = false;
         Debug.Log("pije piwo");
         StartCoroutine(Timer(1, Resetmove));
-        animator.SetBool("Special", true);
+        animator.SetBool("IsSpecial", true);
+        animator.SetInteger("Special", animator.GetInteger("Special") + 1);
     }
 
 }
