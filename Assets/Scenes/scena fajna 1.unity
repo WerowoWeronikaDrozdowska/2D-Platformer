@@ -965,10 +965,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a21295c32259f740be109ea32a3c00b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canmove: 1
   maxSpeed: 12
   stoppingForce: 5
   speed: 10
   jumpForce: 7
+  animator: {fileID: 0}
+  pierd: {fileID: 0}
 --- !u!114 &363542945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1527,8 +1530,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7df106d6acf1b944b81c804a876e25fe, type: 2}
+  m_sharedMaterial: {fileID: 9097117151111958240, guid: 7df106d6acf1b944b81c804a876e25fe, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2756,8 +2759,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7df106d6acf1b944b81c804a876e25fe, type: 2}
+  m_sharedMaterial: {fileID: 9097117151111958240, guid: 7df106d6acf1b944b81c804a876e25fe, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
