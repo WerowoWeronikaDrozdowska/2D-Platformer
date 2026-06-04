@@ -21,7 +21,7 @@ public class PlayerHealth : MonoBehaviour
     {
         health = maxhealth;
         OnHealthInitialised?.Invoke(health);
-        Debug.Log("Invoke");
+        Debug.Log(health+ " "+ maxhealth);
     }
 
     public void ReceiveDamage(int amount, Vector3 origin)
@@ -61,8 +61,9 @@ public class PlayerHealth : MonoBehaviour
     }
     public void AddHealth(float healthToAdd)
     {
-        health += healthToAdd;
-        OnHealthChanged?.Invoke(health, healthToAdd);
+        float newhealth=Mathf.Clamp(health+healthToAdd, 0, maxhealth);
+        OnHealthChanged?.Invoke(newhealth, newhealth-health);
+        health = newhealth;
         Debug.Log(health);
     }
 }
