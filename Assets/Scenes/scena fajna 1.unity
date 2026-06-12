@@ -2664,6 +2664,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Circle
       objectReference: {fileID: 0}
+    - target: {fileID: 8797066132509945457, guid: abc6d20f062d8f84cb15117155966267, type: 3}
+      propertyPath: sceneName
+      value: scena fajna 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
